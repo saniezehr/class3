@@ -1,0 +1,9 @@
+ -- alter table forms change stdName stdName varchar(50)
+ -- alter table forms add stdgender varchar(20),add stdcountry varchar(40)
+-- drop table forms
+-- alter table forms change stdIdcity stdcity varchar(30)
+ -- insert into forms (stdName,stdEmail,stdAge,stdcity,stdgender,stdcountry) values('sani','sani@gmail.com',16,'karachi','female','pakistan'),('nosheen','nosheen@gmail.com',35,'karachi','female','pakistan')
+ -- select * from  forms
+  -- update forms set stdName = 'abeeha' , stdAge = '6' where stdid =1
+ --  update forms set stdName='sani',stdAge='16' where stdName='abeeha' and stdEmail='sani@gmail.com'
+ update forms set stdage=1 where stdname ='sani'or stdemail='nosheen@gmail.c'

@@ -1,0 +1,3 @@
+/*create table tts ( stdId int PRIMARY KEY AUTO_INCREMENT, stdName varchar(30), stdEmail varchar(15) UNIQUE, stdAge int );*/
+/*alter TABLE tts add stdIdcity varchar(30)*/
+/*alter table tts drop stdIdcity */
