@@ -1,0 +1,10 @@
+-- select * from office WHERE age = 20 or age=22
+-- select * from office WHERE age = 20 and age = 23
+ -- select * from office WHERE age in (20,23)
+ -- select * from office WHERE age>=23 and age<=27
+--  select * from office WHERE age BETWEEN 21 and 27
+ -- select * from office WHERE age not in (20,23)
+--  select * from office WHERE age != 20 and age!=23
+ -- select * from office WHERE not city ='karchi'
+ ALTER TABLE office ADD dept_id int, ADD CONSTRAINT FOREIGN key (dept_id) REFERENCES department (id)
+ 

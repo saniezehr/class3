@@ -1,0 +1,23 @@
+ -- agreagte functions{sum(),min(), max(),count(),avg(),}
+  -- select sum(salary) as'sum of salary' from office
+--  select min(salary) as'min of salary' from office
+-- select max(salary) as'max of salary' from office 
+-- select avg(salary) as'avg of salary' from office
+ -- select count(id) as'total' from office
+-- select*from office where salary =(SELECT min(salary) as'min salary' from office);
+-- select city from office GROUP by (city)
+select COUNT(id) as 'total' , city from office GROUP by (city);
+
+
+
+
+
+CREATE TABLE persons(
+    id int primary key AUTO_INCREMENT,
+   first_name varchar (50),
+    last_name varchar (50),
+    gender enum ('female','male'),
+     date_of_birth date
+   
+    )
+INSERT INTO `persons` (`id`, `first_name`, `last_name`, `gender`, `date_of_birth`) VALUES (NULL, 'sani', 'zehra', 'female', '2018-06-14'), (NULL, 'munawer', 'hussain', 'male', '2015-02-03'), (NULL, 'nosheen', 'fatima', 'female', '2014-02-04'), (NULL, 'abeeha', 'zehra', 'female', '2011-03-01'), (NULL, 'ali', 'ahmed', 'male', '2011-03-03'), (NULL, 'qirat', 'fatima', 'female', '2015-02-05'), (NULL, 'waliya', 'fatima', 'female', '2018-06-06'), (NULL, 'mohammad', 'raza', 'male', '2010-05-06');
