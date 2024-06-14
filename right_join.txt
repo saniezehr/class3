@@ -1,0 +1,36 @@
+-- table employe
+/*create table employe (
+    id int PRIMARY key AUTO_INCREMENT ,
+    name varchar (50),
+    salary int,
+    dept_id int )*/
+    
+   -- table department
+    CREATE table department (
+        id int PRIMARY key AUTO_INCREMENT,
+        name varchar(50)
+        )
+-- then apply foreign key (sturucture -> relation)
+
+ ---first into department table
+--- thyen insert into employee table 
+INSERT INTO `employe` (`id`, `name`, `salary`, `dept_id`) VALUES (NULL, 'sani', '200000', '1'), (NULL, 'ahmed', '10000', '3'), (NULL, 'nosheen', '150000', '2'), (NULL, 'miraal', '30000', '1'), (NULL, 'zain', '17000', '2');
+
+-- right join
+
+select employe.name as 'empname', employe.salary,department.name as ' department'
+from employe
+right join
+department
+ON
+employe.dept_id= department.id
+
+--create view
+
+create view employ as
+select employe.name as 'empname', employe.salary,department.name as ' department'
+from employe
+INNER join
+department
+ON
+employe.dept_id= department.id
