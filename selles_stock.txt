@@ -1,0 +1,26 @@
+/* DELIMITER $$ 
+CREATE PROCEDURE stocks_sell2 (s_id int,s_qty int)
+BEGIN
+DECLARE r_stock int;
+select qty into r_stock from stock where id = s_id;
+if s_qty < 0 or s_qty > r_stock THEN
+BEGIN
+select "out of stock";
+END;
+ELSE 
+insert into sells (p_id,p_qty) values (s_id ,s_qty);
+END IF;
+END  */
+
+ CALL stocks_sell2(1,2)
+
+
+begin 
+if e_hpay > 0 then
+BEGIN
+update employe set h_pay= h_pay + e_hpay where id =e_id ;
+END;
+else
+select "can't select neg values";
+End IF;
+end
