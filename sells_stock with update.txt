@@ -1,0 +1,12 @@
+BEGIN
+DECLARE r_stock int;
+select qty into r_stock from stock where id = s_id;
+if s_qty < 0 or s_qty > r_stock THEN
+BEGIN
+select "out of stock";
+END;
+ELSE 
+update stock set qty = qty - s_qty WHERE id =s_id;
+insert into sells (p_id,p_qty) values (s_id ,s_qty);
+END IF;
+END
